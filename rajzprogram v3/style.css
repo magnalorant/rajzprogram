@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+#myCanvas {
+    display: block;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 2px solid #adb5bd;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%; 
+    max-width: 900px; 
+    height: auto; 
+}
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.button-container button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    outline: none;
+}
+.button-container button img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+.button-container button:hover img {
+    transform: scale(1.1);
+}
+.button-container input[type="color"] {
+    display: none;
+}
+.button-container label {
+    margin: 0 15px;
+    font-size: 14px;
+    color: #6c757d;
+}
+@media only screen and (max-width: 600px) {
+    .button-container {
+        width: 90%;
+        bottom: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .button-container button {
+        flex: 0 0 33%;
+        max-width: calc(33% - 10px);
+    }
+    .button-container label {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+}
+#text-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #adb5bd;
+    padding: 20px;
+    z-index: 9999;
+    display: none; 
+}
